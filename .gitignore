@@ -1,8 +1,11 @@
+# OSX
+*.DS_Store
+
 # Built application files
 *.apk
 *.ap_
 
-# Files for the ART/Dalvik VM
+# Files for the Dalvik VM
 *.dex
 
 # Java class files
@@ -38,3 +41,10 @@ captures/
 
 # Keystore files
 *.jks
+
+.gradle
+/local.properties
+/.idea/libraries
+/build
+.idea
+.idea/
