@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xindong.friendsmap">
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
     <application
         android:name="com.xindong.friendsmap.app.FriendsMapApplication"
         android:allowBackup="true"
@@ -10,13 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.xindong.friendsmap.ui.activity.MainActivity">
+        <activity android:name="com.xindong.friendsmap.ui.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.xindong.friendsmap.ui.activity.MainActivity">
+        </activity>
+
+        <receiver android:name="com.xindong.friendsmap.receiver.ForceOfflineReceiver">
+            <intent-filter>
+                <action android:name="com.xindong.friendsmap.FORCE_OFFLINE"/>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
